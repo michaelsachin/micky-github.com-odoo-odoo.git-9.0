@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="view_kjk_sale_order_description_form">
+       <field name="name">sale.order.form</field>
+       <field name="model">sale.order</field>
+       <field name="inherit_id" ref="sale.view_order_form" />
+       <field name="priority" eval="50" />
+       <field name="arch" type="xml">
+         <xpath expr="//field[@name='price_unit']" position="after">
+         <field name="customdesc" />
+         </xpath>
+           <header>
+           <button type="object" string="Replace" name="action_replace" />
+           </header>
+       </field>
+    </record> 
+  </data>
+</openerp> 
