@@ -1,0 +1,26 @@
+#
+##############################################################################
+{
+    'name': 'Purchase Order Line Number',
+    'version': '9.0.1.1.0',
+    'category': 'Accounting',
+    'sequence': 14,
+    'author': 'Michael Sachin',
+    'website': 'www.meisterhonen.com',
+    'license': 'AGPL-3',
+    'images': [
+    ],
+    'depends': [
+        'purchase',
+    ],
+    'data': [
+        'view/purchase_order_view.xml'
+    ],
+    'demo': [
+    ],
+    'test': [
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+}
