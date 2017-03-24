@@ -26,7 +26,7 @@ class z(models.Model):
     x_product = fields.Char(related='product_id.name', readonly=True, store=True)
 
     @api.one
-    @api.depends('x_name','x_name1','name','x_name2','compmodel','x_name4','custdraw','x_name6','compdia','x_name8','compdim','x_name10','x_name11','customdesc','x_name13','x_product','x_additional_desc','x_name14','custoper')
+    @api.depends('x_name','x_name1','name','x_name2','compmodel','x_name4','custdraw','x_name6','compdia','x_name8','compdim','x_name10','x_name11','customdesc','x_name13','x_product','x_name14','custoper')
     def _compute_name(self):
 
         if self.product_id and self.name:
