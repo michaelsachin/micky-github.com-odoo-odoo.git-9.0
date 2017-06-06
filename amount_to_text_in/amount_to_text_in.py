@@ -16,7 +16,10 @@ class account_invoice(models.Model):
         convert_amount_in_words2 = amount_to_text_en.amount_to_text(amount, lang='en', currency='')
         convert_change_in_words = convert_amount_in_words2.split(' and')[1]
         convert_change_in_words2 = convert_change_in_words.split(' Cent')[0]+' Paise, Only'
-        convert_amount_in_words2 = convert_amount_in_words2.split(' and ')[0]+' Rupees and '+convert_change_in_words2
+        if "Zero" in convert_amount_in_words2:
+            convert_amount_in_words2 = convert_amount_in_words2.split(' and')[0]+' Rupees, Only'
+        else:
+            convert_amount_in_words2 = convert_amount_in_words2.split(' and')[0]+' Rupees and '+convert_change_in_words2
         return convert_amount_in_words2
 
 
