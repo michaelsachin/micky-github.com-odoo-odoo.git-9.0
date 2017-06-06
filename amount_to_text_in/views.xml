@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+            <xpath expr="//table[@class='table table-condensed']" position="after">
+             <table>
+             <tr>
+             <td>
+             <b>Amount in Words : </b> <span t-esc="o.amount_to_text_in(o.amount_total, o.currency_id)"/>
+             </td>
+             </tr>
+             </table>
+            </xpath>
+        </template>
+    </data>
+</openerp>
